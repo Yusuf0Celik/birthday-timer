@@ -9,6 +9,8 @@ const minuteSpan = document.querySelector(".minute-span");
 const secondSpan = document.querySelector(".second-span");
 // Variabelen
 
-submit.addEventListener("click", function no() {
-  console.log(timerInput.value);
-})
+submit.addEventListener("click", submit);
+
+function submit() {
+  
+}
