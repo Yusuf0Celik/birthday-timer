@@ -12,18 +12,17 @@ const secondSpan = document.querySelector(".second-span");
 submitBtn.addEventListener("click", submit);
 
 function submit() {
-    const dateObj = new Date(timerInput.value);
-    let year = dateObj.getFullYear();
-    let month = dateObj.getMonth() + 1;
-    let day = dateObj.getDate();
-    let hour = dateObj.getHours();
-    let minute = dateObj.getMinutes();
-    // calc to d h m s
-    // put in span
+    const countToDate = new Date(timerInput.value);
+    let year = countToDate.getFullYear();
+    let month = countToDate.getMonth() + 1;
+    let day = countToDate.getDate();
+    let hour = countToDate.getHours();
+    let minute = countToDate.getMinutes();
+    console.log(countToDate);
+    const second = 1000;
 }
 
-function calculateTime() {
-}
-
-const distance = new Date();
-console.log(distance);
+// Get input
+// Get year, month, day, hour and minute of input
+// get date
+// get distance between date and time now
