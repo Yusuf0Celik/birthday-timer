@@ -9,16 +9,24 @@ const hourSpan = document.querySelector(".hour-span");
 const minuteSpan = document.querySelector(".minute-span");
 const secondSpan = document.querySelector(".second-span");
 const announcement = document.querySelector(".announcement");
-let interval = setInterval(calculateTime, 1000);
+let interval;
 // Variabelen
 
 submitBtn.addEventListener("click", submit);
 
 function submit() {
-    
+  if (interval > 1) {
+    clearInterval(interval);
+  } else {
+    interval = setInterval(calculateTime, 1000);
+  }
 }
 
 function calculateTime() {
+  const localTime = localStorage.setItem("timer", JSON.stringify(timerInput.value));
+  let timerParse = JSON.parse(localStorage.getItem("timer"));
+  // if (timerParse === null) {
+    console.log(localTime);
     const countToDate = new Date(timerInput.value);
     const second = 1000;
     const minute = second * 60;
@@ -34,16 +42,16 @@ function calculateTime() {
     hourSpan.textContent = textHour;
     daySpan.textContent = textDay;
     if (countToDate < new Date()) {
-        timerText.style.display = "none";
-        announcement.style.display = "block";
-        announcement.textContent = "Het Event is geweest";
+      timerText.style.display = "none";
+      announcement.style.display = "block";
+      announcement.textContent = "Het Event is geweest";
     } else if(countToDate > new Date()) {
-        timerText.classList.remove("hide");
-        timerText.style.display = "block";
-        announcement.style.display = "none";
+      timerText.classList.remove("hide");
+      timerText.style.display = "block";
+      announcement.style.display = "none";
     }
+  // } else {
+    // timerParse;
+    // timerInput.value = timerParse
+  // }
 }
-
-// function getLocalStorage() {
-//     localStorage.setItem()
-// }
