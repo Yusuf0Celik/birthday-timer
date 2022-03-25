@@ -70,3 +70,13 @@ main {
 .time-span {
   color: rgb(100, 255, 146);
 }
+
+.hide {
+  display: none;
+}
+
+.announcement {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+}

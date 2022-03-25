@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <title>Birthday Timer</title>
+  <title>Timer</title>
 </head>
 <body>
   <main>
@@ -18,13 +18,13 @@
         <input type="datetime-local" class="timer-input" max="9999-12-31T23:59">
         <button class="submit-btn">Submit</button>
       </div>
-      <div class="timer-text">
-        <span class="time-span day-span">800</span> days
-        <span class="time-span hour-span">800</span> hours
-        <span class="time-span minute-span">800</span> minutes
-        <span class="time-span second-span">800</span> seconds
-        <div class="announcement"></div>
+      <div class="timer-text hide">
+        <span class="time-span day-span"></span> days
+        <span class="time-span hour-span"></span> hours
+        <span class="time-span minute-span"></span> minutes
+        <span class="time-span second-span"></span> seconds
       </div>
+      <div class="announcement"></div>
     </div>
   </main>
   <script src="js/main.js"></script>
